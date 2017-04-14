@@ -1,10 +1,10 @@
-# Project API local setup
+# Django-Scrapy local setup
 
 ### Version 0.1
 
 ### About
 
-A boilerplate for Django Project with SQL. There is sample app named as Posts for reference.
+A boilerplate for Django Project with SQL and Scrapy. There is sample app named as Posts for reference.
 
 The project is AWS ready and can be deployed in minutes.
 

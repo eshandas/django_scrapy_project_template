@@ -1,0 +1,52 @@
+# Using Scrapy With Django
+
+### Install Scrapy
+
+Scrapy and its dependencies will be installed from requirements/local(server).txt
+
+### Configuration
+
+Shows how to run scrapy from Django project root
+
+* Put scrapy project at an appropriate place. It is placed in spiders.project_spiders in this project.
+
+* Remove **scrapy.cfg** from project_spiders.settings and put it in root
+
+* In **scrapy.cfg**, point towards the scrapy **settings.py** file
+```
+[settings]
+default = crawler.project_spiders.project_spiders.settings
+```
+
+* Also give proper path to the following variables in scrapy **settings.py** file
+```
+.
+.
+.
+SPIDER_MODULES = ['spiders.project_spiders.spiders']
+NEWSPIDER_MODULE = 'spiders.project_spiders.spiders'
+.
+.
+.
+ITEM_PIPELINES = {
+    'spiders.project_spiders.pipelines.ProjectSpidersPipeline': 300,
+}
+```
+
+
+Shows how to run in Django context
+
+* in scrapy **settings.py** file, add the following settings:
+```
+import sys
+import django
+from django.conf import settings
+.
+.
+.
+# Setting up Django context
+sys.path.append(settings.BASE_DIR)  # Absolute project path
+django.setup()
+```
+
+* Import Django components normally inside scrapy

@@ -5,6 +5,7 @@ billiard==3.3.0.23
 boto==2.43.0
 celery==3.1.23
 coreapi==2.1.1
+coreschema==0.0.4
 Django==1.8
 django-celery==3.1.17
 django-ckeditor==5.1.1
@@ -40,5 +41,6 @@ sqlparse==0.1.19
 Sphinx==1.5.3
 supervisor==3.3.0
 ua-parser==0.7.1
+Unidecode==0.4.20
 uritemplate==3.0.0
 user-agents==1.0.1
