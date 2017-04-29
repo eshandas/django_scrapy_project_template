@@ -138,3 +138,8 @@ def generate_docs():
     print_banner('Creating documentations')
     with cd(DOCS_DIR):
         local('make html')
+
+
+def crawl():
+    print_banner('Starting upwork spider')
+    local('scrapy crawl upwork_spider')
